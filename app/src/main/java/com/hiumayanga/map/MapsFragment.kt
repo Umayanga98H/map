@@ -26,10 +26,32 @@ class MapsFragment : Fragment() {
          * install it inside the SupportMapFragment. This method will only be triggered once the
          * user has installed Google Play services and returned to the app.
          */
-        val sydney = LatLng(-34.0, 151.0)
-        googleMap.maxZoomLevel
-        googleMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        val kelaniya = LatLng(6.9744, 79.9161)
+        val jayawardanapura = LatLng(6.8528, 79.9036)
+        val peradeniya = LatLng(7.2549, 80.5974)
+        val colombo = LatLng(6.9000, 79.8588)
+        val ruhuna = LatLng(5.9381, 80.5761)
+        val jaffna = LatLng(9.6849, 80.0220)
+
+
+        googleMap.setMinZoomPreference(8.0f)
+        googleMap.addMarker(MarkerOptions().position(kelaniya).title("University of Kelaniya"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(kelaniya))
+
+        googleMap.addMarker(MarkerOptions().position(jayawardanapura).title("University of Jayawardanapura"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(jayawardanapura))
+
+        googleMap.addMarker(MarkerOptions().position(peradeniya).title("University of Peradeniya"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(peradeniya))
+
+        googleMap.addMarker(MarkerOptions().position(colombo).title("University of Colombo"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(colombo))
+
+        googleMap.addMarker(MarkerOptions().position(ruhuna).title("University of Ruhuna"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(ruhuna))
+
+        googleMap.addMarker(MarkerOptions().position(jaffna).title("University of Jaffna"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(jaffna))
     }
 
     override fun onCreateView(
