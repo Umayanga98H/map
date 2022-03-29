@@ -32,6 +32,9 @@ class MapsFragment : Fragment() {
         val colombo = LatLng(6.9000, 79.8588)
         val ruhuna = LatLng(5.9381, 80.5761)
         val jaffna = LatLng(9.6849, 80.0220)
+        val eastern = LatLng(7.7944, 81.5790)
+        val rajarata = LatLng(8.3620, 80.5048)
+        val sabaragamuwa = LatLng(6.7146, 80.7872)
 
 
         googleMap.setMinZoomPreference(8.0f)
@@ -51,6 +54,15 @@ class MapsFragment : Fragment() {
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(ruhuna))
 
         googleMap.addMarker(MarkerOptions().position(jaffna).title("University of Jaffna"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(jaffna))
+
+        googleMap.addMarker(MarkerOptions().position(eastern).title("University of Eastern"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(eastern))
+
+        googleMap.addMarker(MarkerOptions().position(rajarata).title("University of Rajarata"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(rajarata))
+
+        googleMap.addMarker(MarkerOptions().position(sabaragamuwa).title("University of Sabaragamuwa"))
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(jaffna))
     }
 
